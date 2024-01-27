@@ -1,0 +1,13 @@
+*
+.*/
+!.config/
+!.config/hypr/*
+!.config/kitty/*
+!.config/qutebrowser/themes/*
+!.config/qutebrowser/config.py
+!.config/rofi/config.rasi
+!.local/
+!.local/share/rofi/themes/launchpad.rasi
+!.zshrc
+!.config/neofetch/config.conf
+!.gitignore
