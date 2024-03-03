@@ -11,6 +11,7 @@
 !.local/*/
 !.local/share/rofi/themes/launchpad.rasi
 !.zshrc
+!.p10k.zsh
 !.config/neofetch/config.conf
 Documents
 .tmux/
