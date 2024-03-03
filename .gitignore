@@ -7,6 +7,8 @@
 !.config/qutebrowser/themes/*
 !.config/qutebrowser/config.py
 !.config/rofi/config.rasi
+!.config/waybar/*
+!.config/nvim/*
 .local/*
 !.local/*/
 !.local/share/rofi/themes/launchpad.rasi
