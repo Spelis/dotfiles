@@ -1,7 +1,7 @@
 * {
 	border-radius: 0;
-	transition: all .3s ease;
-	color: #c0caf5
+	transition: all .5s ease;
+	color: #c0caf5;
 }
 
 window {
@@ -25,6 +25,10 @@ window {
 	padding: 10px 0;
 }
 
+.modules-right {
+	padding-top: 0;
+}
+
 .modules-center {
 	padding: 0;
 }
@@ -42,4 +46,26 @@ window {
 #workspaces>button.active,
 #taskbar>button.active {
 	background: #7dcfff;
+}
+
+#image,
+#custom-player {
+	background-color: #00ff55;
+	color: black;
+}
+
+#image {
+	padding-top: 10px;
+	border-radius: 100px 100px 0 0;
+}
+
+#custom-player {
+	border-radius: 0 0 100px 100px;
+	padding-bottom: 10px;
+}
+
+#cava {
+	margin: 0;
+	padding: 0;
+	font-size: 8px;
 }

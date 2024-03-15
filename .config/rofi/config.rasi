@@ -1,2 +1,3 @@
 //@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
-@theme "/home/elis/.local/share/rofi/themes/launchpad.rasi"
+@theme "/home/elis/.config/rofi/launchpad.rasi"
+

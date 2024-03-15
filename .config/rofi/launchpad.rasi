@@ -1,0 +1,93 @@
+
+/*******************************************************************************
+ * MACOS LAUNCHPAD LIKE THEME FOR ROFI 
+ * User                 : LR-Tech               
+ * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
+ *******************************************************************************/
+
+* {
+    font: "JetBrainsMono Nerd Font 9";
+
+    bg0:  #24242480;
+    bg1:  #363636;
+    bg2:  #f5f5f520;
+    bg3:  #f5f5f540;
+    bg4:  #00000020;
+
+    fg0:  #c0caf5;
+    fg1:  #c0caf580;
+
+    background-color: transparent;
+    text-color:       @fg0;
+    padding:          0px;
+    margin:           0px;
+}
+
+window {
+  fullscreen: true;
+  padding: 1em;
+  background-color: #00000020;
+}
+
+mainbox {
+  padding:  8px;
+}
+
+inputbar {
+  margin:   0px calc( 50% - 120px );
+  padding:  2px 4px;
+  spacing:  4px;
+
+  border:         1px;
+  border-radius:  2px;
+  border-color:   transparent;
+  background-color: #00000080;
+
+  children: [entry];
+}
+
+prompt {
+  enabled:  false;
+}
+
+entry {
+  placeholder:        "Search";
+  placeholder-color:  #aaa;
+}
+
+listview {
+  margin:   48px calc( 40% - 560px );
+  padding: 10px;
+  spacing:  48px;
+  columns:  8;
+  fixed-columns: true;
+  background-color:#00000010;
+  border-radius:13px;
+}
+
+element, element-text, element-icon {
+  cursor: pointer;
+}
+
+element {
+  padding:      8px;
+  spacing:      4px;
+
+  orientation:    vertical;
+  border-radius:  16px;
+}
+
+element selected {
+  background-color: @bg4;
+    border: 2px;
+  border-color: #7dcfff;
+}
+
+element-icon {
+  size: 4em;
+  horizontal-align: 0.5;
+}
+
+element-text {
+  horizontal-align: 0.5;
+}

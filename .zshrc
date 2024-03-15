@@ -19,6 +19,7 @@ alias cls='clear'
 alias pacman='sudo pacman'
 alias nv='nvim'
 alias z='cd'
+alias x='exit'
 
 zstyle ':znap:*' repos-dir ~/Documents/Zsh/
 znap source marlonrichert/zsh-autocomplete
@@ -29,3 +30,5 @@ znap source romkatv/zsh-defer
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 setopt correct
+export DRI_PRIME=1
+export PATH=$PATH:./node_modules/.bin

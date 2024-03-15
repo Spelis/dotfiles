@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup({
+	dir = "~/Documents/Lua/nvSidebar",
 	"folke/trouble.nvim",
 	'lewis6991/satellite.nvim',
 	"folke/which-key.nvim",
@@ -41,6 +42,13 @@ require("lazy").setup({
 	"nvim-telescope/telescope.nvim",
 	"nvim-lua/plenary.nvim",
 	"mawkler/modicator.nvim",
+	{
+		'Bekaboo/dropbar.nvim',
+		-- optional, but required for fuzzy finder support
+		dependencies = {
+			'nvim-telescope/telescope-fzf-native.nvim'
+		}
+	},
 	{
 		"smoka7/multicursors.nvim",
 		event = "VeryLazy",
@@ -163,6 +171,8 @@ mason_lspconfig.setup_handlers({
 	end,
 })
 
+require('lspconfig').pyright.setup { on_attach = on_attach, settings = { pyright = { autoImportCompletion = true, }, python = { analysis = { autoSearchPaths = true, diagnosticMode = 'openFilesOnly', useLibraryCodeForTypes = true, typeCheckingMode = 'off' } } } }
+
 local cmp = require('cmp')
 cmp.setup({
 	confirmation = {
@@ -214,8 +224,7 @@ require("which-key").setup()
 
 
 
-
-vim.cmd('colorscheme tokyonight')
+vim.cmd('colorscheme tokyonight-night')
 vim.cmd('set cursorline')
 vim.cmd('set number')
 require("modicator").setup()
