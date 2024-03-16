@@ -6,6 +6,7 @@
 !.config/kitty/*
 !.config/qutebrowser/themes/*
 !.config/qutebrowser/config.py
+!.config/qutebrowser/autoconfig.yml
 !.config/rofi/*
 !.config/waybar/*
 !.config/nvim/*
