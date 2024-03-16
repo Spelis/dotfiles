@@ -21,8 +21,12 @@
 		"cpu",
 		"memory",
 		"disk",
+		"battery",
 		"tray"
 	],
+	"battery": {
+		"format": "{icon}\n{capacity}%"
+	},
 	"tray": {
 		"icon-size": 24,
 		"spacing": 5
@@ -44,18 +48,22 @@
 		"persistent-workspaces": {
 			"1": [
 				"DP-1",
+				"eDP-1",
 				"HDMI-A-1"
 			],
 			"2": [
 				"DP-1",
+				"eDP-1",
 				"HDMI-A-1"
 			],
 			"3": [
 				"DP-1",
+				"eDP-1",
 				"HDMI-A-1"
 			],
 			"4": [
 				"DP-1",
+				"eDP-1",
 				"HDMI-A-1"
 			]
 		},
@@ -158,7 +166,7 @@
 	"custom/player": {
 		"exec": "python ~/Documents/Python/swb.py/playback.py",
 		"interval": 10,
-		"rotate":270,
+		"rotate": 270,
 		"on-scroll-up": "playerctl -p spotify volume 0.05+",
 		"on-scroll-down": "playerctl -p spotify volume 0.05-",
 		"on-click": "playerctl -p spotify play-pause"
