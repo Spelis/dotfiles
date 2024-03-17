@@ -16,6 +16,7 @@ if r.status_code == 200:
         }
 
     weather = {
+    "Clear": " ",
     "Sunny": " ",
     "Cloudy": " ",
     "Overcast": " ",
