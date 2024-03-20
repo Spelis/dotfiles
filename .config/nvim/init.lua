@@ -43,6 +43,10 @@ require("lazy").setup({
 	"nvim-lua/plenary.nvim",
 	"mawkler/modicator.nvim",
 	{
+		'aurum77/live-server.nvim',
+		cmd = { 'LiveServerStart', 'LiveServerStop' },
+	},
+	{
 		'Bekaboo/dropbar.nvim',
 		-- optional, but required for fuzzy finder support
 		dependencies = {
@@ -217,7 +221,7 @@ require("conform").setup({
 require('nvim-tree').setup()
 require('satellite').setup()
 require("which-key").setup()
-
+require "live_server.util".install()
 
 
 
