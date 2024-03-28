@@ -13,12 +13,19 @@ source ~/.p10k.zsh
         https://github.com/marlonrichert/zsh-snap.git ~/Documents/Git/znap
 source ~/Documents/Git/znap/znap.zsh  # Start Znap
 
+openclose() {
+    "$@" &
+    disown
+    exit
+}
+
 alias nf='neofetch | lolcat'
 alias cls='clear'
 alias pacman='sudo pacman'
 alias nv='nvim'
 alias z='cd'
 alias x='exit'
+alias code='openclose vscodium'
 
 zstyle ':znap:*' repos-dir ~/Documents/Zsh/
 znap source marlonrichert/zsh-autocomplete
