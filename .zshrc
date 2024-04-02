@@ -19,6 +19,13 @@ openclose() {
     exit
 }
 
+gui() {
+    "$@" &
+    disown
+}
+
+
+
 alias nf='neofetch | lolcat'
 alias cls='clear'
 alias pacman='sudo pacman'

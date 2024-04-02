@@ -1,71 +1,99 @@
 * {
-	border-radius: 0;
-	transition: all .5s ease;
-	color: #c0caf5;
+  border-radius: 0;
+  transition: all 0.5s ease;
+  color: #c0caf5;
+  all: unset;
+  font-family:'JetBrainsMono Nerd Font'
 }
 
 window {
-	background: transparent;
-}
-
-#pulseaudio-slider {
-	min-width: 100px;
-}
-
-#pulseaudio-slider slider {
-	border-radius: 100px;
+  background: transparent;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-	background: rgba(0, 0, 0, 0.5);
-	border: 2px solid #7dcfff;
-	border-radius: 100px;
-	padding: 10px 0;
+  background: #1a1b26;
+  border: 2px solid #7dcfff;
+  border-radius: 100px;
+  padding: 0 0;
 }
 
 .modules-right {
-	padding-top: 0;
+  padding-top: 0;
 }
 
 .modules-center {
-	padding: 0;
+  padding: 0;
 }
 
-.modules-center #workspaces>button:nth-child(1) {
-	border-top-left-radius: 100px;
-	border-top-right-radius: 100px;
+.modules-center #workspaces > button:nth-child(1) {
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
 }
 
-.modules-center #taskbar>button:nth-last-child(1) {
-	border-bottom-left-radius: 100px;
-	border-bottom-right-radius: 100px;
+.modules-center #taskbar > button:nth-last-child(1) {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 
-#workspaces>button.active,
-#taskbar>button.active {
-	background: #7dcfff;
+#workspaces > button.active {
+  background-color: #7dcfff;
+  padding: 0px 20px;
+}
+#workspaces > button {
+  background-color: #c0caf5;
+  padding:0px 10px;
+  font-size: 10px;
+  transition: all 0.3s ease;
+  border-radius: 100px;
+  margin: 0 1px;
+}
+#workspaces {
+  padding: 10px 0;
 }
 
 #image,
 #custom-player {
-	background-color: #00ff55;
-	color: black;
+  background-color: #292e42;
 }
 
 #image {
-	padding-top: 10px;
-	border-radius: 100px 100px 0 0;
+  padding-left: 10px;
+  border-radius: 100px 0 0 100px;
 }
 
 #custom-player {
-	border-radius: 0 0 100px 100px;
-	padding-bottom: 10px;
+  border-radius: 0 100px 100px 0;
+  padding-right: 10px;
+  margin-right: 10px;
 }
 
 #cava {
-	margin: 0;
-	padding: 0;
-	font-size: 8px;
+  margin: 0;
+  padding: 0;
+  font-size: 8px;
+}
+
+#group-power {
+  padding: 7px;
+}
+
+#custom-power,
+#custom-quit,
+#custom-reboot {
+  padding: 2.5px 15px;
+  border-radius: 100px;
+  margin: 2.5px;
+  background: #292e42;
+}
+
+#custom-volume,
+#custom-cpu,
+#custom-memory,
+#custom-disk {
+  font-family: sans-serif;
+  letter-spacing: -4px;
+  margin: 0 5px;
+  padding: 0 10px;
 }
