@@ -33,6 +33,7 @@ alias nv='nvim'
 alias z='cd'
 alias x='exit'
 alias code='openclose vscodium'
+alias chrome='openclose google-chrome-stable'
 
 zstyle ':znap:*' repos-dir ~/Documents/Zsh/
 znap source marlonrichert/zsh-autocomplete
