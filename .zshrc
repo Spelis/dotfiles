@@ -29,10 +29,14 @@ gui() {
 alias nf='neofetch | lolcat'
 alias cls='clear'
 alias pacman='sudo pacman'
+alias yoink='paru -Syy'
+alias yeet='paru -R'
+alias overhaul='paru -Syyuu'
+alias octopi='/usr/bin/octopi'
 alias nv='nvim'
 alias z='cd'
 alias x='exit'
-alias code='openclose vscodium'
+#alias code='openclose vscodium'
 alias chrome='openclose google-chrome-stable'
 
 zstyle ':znap:*' repos-dir ~/Documents/Zsh/
