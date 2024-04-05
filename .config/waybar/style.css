@@ -1,99 +1,104 @@
 * {
-  border-radius: 0;
-  transition: all 0.5s ease;
-  color: #c0caf5;
-  all: unset;
-  font-family:'JetBrainsMono Nerd Font'
+	border-radius: 0;
+	transition: all 0.5s ease;
+	color: #c0caf5;
+	all: unset;
+	font-family: 'GohuFont11 Nerd Font Mono'
 }
 
 window {
-  background: transparent;
+	background: transparent;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-  background: #1a1b26;
-  border: 2px solid #7dcfff;
-  border-radius: 100px;
-  padding: 0 0;
+	background: #1a1b26;
+	border: 2px solid #7dcfff;
+	border-radius: 100px;
+	padding: 0 0;
 }
 
 .modules-right {
-  padding-top: 0;
+	padding-top: 0;
 }
 
 .modules-center {
-  padding: 0;
+	padding: 0;
 }
 
-.modules-center #workspaces > button:nth-child(1) {
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
+.modules-center #workspaces>button:nth-child(1) {
+	border-top-left-radius: 100px;
+	border-bottom-left-radius: 100px;
 }
 
-.modules-center #taskbar > button:nth-last-child(1) {
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
+.modules-center #taskbar>button:nth-last-child(1) {
+	border-top-right-radius: 100px;
+	border-bottom-right-radius: 100px;
 }
 
-#workspaces > button.active {
-  background-color: #7dcfff;
-  padding: 0px 20px;
+#workspaces>button.empty {
+	color: #565f89;
 }
-#workspaces > button {
-  background-color: #c0caf5;
-  padding:0px 10px;
-  font-size: 10px;
-  transition: all 0.3s ease;
-  border-radius: 100px;
-  margin: 0 1px;
+#workspaces>button.urgent {
+	color: #f7768e;
 }
+#workspaces>button.active {
+	color: #7dcfff;
+}
+
+#workspaces>button {
+	color: #c0caf5;
+	font-size: 20px;
+	transition: all 0.3s ease;
+	margin:0 2.5px
+}
+
 #workspaces {
-  padding: 10px 0;
+	padding: 10px 0;
 }
 
 #image,
 #custom-player {
-  background-color: #292e42;
+	background-color: #292e42;
 }
 
 #image {
-  padding-left: 10px;
-  border-radius: 100px 0 0 100px;
+	padding-left: 10px;
+	border-radius: 100px 0 0 100px;
 }
 
 #custom-player {
-  border-radius: 0 100px 100px 0;
-  padding-right: 10px;
-  margin-right: 10px;
+	border-radius: 0 100px 100px 0;
+	padding-right: 10px;
+	margin-right: 10px;
 }
 
 #cava {
-  margin: 0;
-  padding: 0;
-  font-size: 8px;
+	margin: 0;
+	padding: 0;
+	font-size: 8px;
 }
 
 #group-power {
-  padding: 7px;
+	padding: 7px;
 }
 
 #custom-power,
 #custom-quit,
 #custom-reboot {
-  padding: 2.5px 15px;
-  border-radius: 100px;
-  margin: 2.5px;
-  background: #292e42;
+	padding: 2.5px 15px;
+	border-radius: 100px;
+	margin: 2.5px;
+	background: #292e42;
 }
 
 #custom-volume,
 #custom-cpu,
 #custom-memory,
 #custom-disk {
-  font-family: sans-serif;
-  letter-spacing: -4px;
-  margin: 0 5px;
-  padding: 0 10px;
+	font-family: sans-serif;
+	letter-spacing: -4px;
+	margin: 0 5px;
+	padding: 0 10px;
 }

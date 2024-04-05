@@ -19,25 +19,20 @@ openclose() {
     exit
 }
 
-gui() {
-    "$@" &
-    disown
-}
-
 
 
 alias nf='neofetch | lolcat'
 alias cls='clear'
 alias pacman='sudo pacman'
-alias yoink='paru -Syy'
-alias yeet='paru -R'
-alias overhaul='paru -Syyuu'
-alias octopi='/usr/bin/octopi'
+alias yoink='paru -Syy'      # install package
+alias yeet='paru -R'         # delete package
+alias overhaul='sudo pacman -Syyuu && paru -Syyuu' # update system
 alias nv='nvim'
 alias z='cd'
 alias x='exit'
-#alias code='openclose vscodium'
-alias chrome='openclose google-chrome-stable'
+alias kys='exit' #hey, i mean it literally kills itself
+alias code='openclose code' # visual studio code
+alias chrome='openclose google-chrome-stable' # google chrome
 
 zstyle ':znap:*' repos-dir ~/Documents/Zsh/
 znap source marlonrichert/zsh-autocomplete

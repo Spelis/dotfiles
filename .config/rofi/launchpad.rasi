@@ -1,12 +1,6 @@
 
-/*******************************************************************************
- * MACOS LAUNCHPAD LIKE THEME FOR ROFI 
- * User                 : LR-Tech               
- * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
- *******************************************************************************/
-
 * {
-    font: "JetBrainsMono Nerd Font 9";
+    font: "GohuFont11 Nerd Font Mono 11";
 
     bg0:  #24242480;
     bg1:  #363636;
@@ -24,45 +18,45 @@
 }
 
 window {
-  fullscreen: true;
-  padding: 1em;
-  background-color: #00000020;
+  fullscreen: false;
+  padding: 0;
+  background-color:#16161e;
+  height:580px;
+  border-radius:16px;
 }
 
 mainbox {
-  padding:  8px;
+  padding:  0;
 }
 
 inputbar {
-  margin:   0px calc( 50% - 120px );
-  padding:  2px 4px;
-  spacing:  4px;
+  background-color: #16161e;
+  margin:0 10%;
+  padding:8px;
+  border-radius:16px;
+  border: 2px;
+  border-color:#7dcfffff;
 
-  border:         1px;
-  border-radius:  2px;
-  border-color:   transparent;
-  background-color: #00000080;
-
-  children: [entry];
+  children: [prompt,entry];
 }
 
 prompt {
-  enabled:  false;
+  enabled:  true;
 }
 
 entry {
-  placeholder:        "Search";
+  placeholder:        "search";
   placeholder-color:  #aaa;
 }
 
 listview {
-  margin:   48px calc( 40% - 560px );
+  border-radius:16px;
+  margin:  0;
   padding: 10px;
-  spacing:  48px;
-  columns:  8;
+  spacing:  4px;
+  columns:  2;
   fixed-columns: true;
-  background-color:#00000010;
-  border-radius:13px;
+  background-color:#1a1b26ff;
 }
 
 element, element-text, element-icon {
@@ -71,23 +65,24 @@ element, element-text, element-icon {
 
 element {
   padding:      8px;
-  spacing:      4px;
+  spacing:      1px;
 
-  orientation:    vertical;
+  orientation:    horizontal;
   border-radius:  16px;
+  background-color:#00000010;
 }
 
 element selected {
-  background-color: @bg4;
-    border: 2px;
-  border-color: #7dcfff;
+  background-color: #7dcfff;
+  color:black;
 }
 
 element-icon {
-  size: 4em;
+  size: 2em;
   horizontal-align: 0.5;
 }
 
 element-text {
   horizontal-align: 0.5;
+  color:inherit;
 }
