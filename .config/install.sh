@@ -3,7 +3,7 @@
 echo "love from spelis :3 (script starting in 10 seconds)"
 sleep 10
 echo "moving dotfiles"
-mv * ../
+mv * ../.config
 echo "installing paru"
 git clone https://aur.archlinux.org/paru.git
 cd paru
