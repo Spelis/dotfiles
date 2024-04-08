@@ -1,3 +1,6 @@
+cat ~/.cache/wal/sequences
+
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -19,12 +22,10 @@ openclose() {
     exit
 }
 
-
-
-alias nf='neofetch | lolcat'
+alias nf='neofetch'
 alias cls='clear'
 alias pacman='sudo pacman'
-alias yoink='paru -Syy'      # install package
+alias yoink='paru -S'      # install package
 alias yeet='paru -R'         # delete package
 alias overhaul='sudo pacman -Syyuu && paru -Syyuu' # update system
 alias nv='nvim'
@@ -45,3 +46,4 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 setopt correct
 export DRI_PRIME=1
 export PATH=$PATH:./node_modules/.bin
+

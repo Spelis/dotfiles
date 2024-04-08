@@ -8,7 +8,7 @@
 	font-family: 'GohuFont11 Nerd Font Mono'
 }
 
-window {
+s window {
 	background: transparent;
 }
 
@@ -40,19 +40,19 @@ window {
 }
 
 #workspaces>button.empty {
-	color: @color8;
+	color: #565f89;
 }
 
 #workspaces>button.urgent {
-	color: @color2;
+	color: #f7768e;
 }
 
 #workspaces>button.active {
-	color: @color1;
+	color: #7dcfff;
 }
 
 #workspaces>button {
-	color: @foreground;
+	color: #c0caf5;
 	font-size: 20px;
 	transition: all 0.3s ease;
 	margin: 0 2.5px
@@ -102,85 +102,24 @@ window {
 
 #win {
 	padding: 2px 7px;
-	margin: 2px 2px 2px 1px;
+	margin: 2px;
 	background-color: @color1;
-	border-radius: 16px 100px 100px 16px;
-}
-
-#window {
-	color:@foreground;
+	border-radius: 100px;
 }
 
 #window.win2 {
-	color: @foreground;
-	opacity:0.7;
+	color: #565f89;
 }
 
 #group-info {
 	background: @color1;
 	margin: 2px 2px 2px 5px;
 	padding: 0 5px;
-	padding-right: 0;
 	border-radius: 16px 100px 100px 16px;
 }
 
-#custom-infolabel {
-	padding-right:5px;
-}
+#group-info .not-info {}
 
-#pulseaudio {
-	background-color:@color2;
-	padding:0 10px;
-	margin:1px;
-	border-radius:100px 16px 16px 100px;
-}
-#cpu {
-	background-color:@color3;
-	padding:0 10px;
-	margin:1px;
-	border-radius:3.5px;
-}
-#memory {
-	background-color:@color4;
-	padding:0 10px;
-	margin:1px;
-	border-radius:3.5px;
-}
-#battery {
-	background-color:@color7;
-	padding:0 10px;
-	margin:1px;
-	border-radius:3.5px;
-}
 
-#disk {
-	background-color:@color5;
-	padding:0 10px;
-	margin:1px;
-	border-radius:16px 100px 100px 16px;
-}
 
-#custom-wal {
-	background-color:@color6;
-	padding:0 10px;
-	margin:2px 1px 2px 2px;
-	border-radius:100px 16px 16px 100px;
-	font-size:20px;
-}
 
-#custom-sback,
-#custom-playpause,
-#custom-sfw {
-	margin:8px 2px;
-	border-radius:3.5px;
-	padding:2px 8px;
-}
-#custom-sback {
-	background:@color3;
-}
-#custom-playpause {
-	background:@color4;
-}
-#custom-sfw {
-	background:@color5;
-}

@@ -1,5 +1,6 @@
 {
   "layer": "top",
+  "reload_style_on_change": true,
   "position": "top",
   "margin-top": 4,
   "margin-bottom": 4,
@@ -7,28 +8,32 @@
   "margin-left": 4,
   "modules-center": [
     "hyprland/workspaces",
-    "wlr/taskbar"
+    "wlr/taskbar",
+    "group/group-info"
   ],
   "modules-right": [
-    "image",
-    "custom/player",
+    "tray",
+    "group/group-player",
     "cava",
     "clock",
     "group/group-power"
   ],
   "modules-left": [
-    "custom/volume",
-    "custom/cpu",
-    "custom/memory",
-    "custom/disk",
-    "battery",
-    "tray"
+    "custom/wal",
+    "group/win"
   ],
   "battery": {
-    "format": "{icon}\n{capacity}%"
+    "format": "{icon}\n{capacity}%",
+    "format-icons": [
+    	"",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   "tray": {
-    "icon-size": 24,
+    "icon-size": 20,
     "spacing": 5
   },
   "wlr/taskbar": {
@@ -37,7 +42,19 @@
     "format": "{icon}",
     "icon-size": 32
   },
+  
+  "group/win": {
+    "orientation":"vertical",
+    "modules":[
+      "hyprland/window",
+      "hyprland/window#win2"
+    ]
+  },
   "hyprland/window": {
+    "format": "{initialClass}",
+    "on-click-middle": "hyprctl dispatch killactive"
+  },
+  "hyprland/window#win2": {
     "format": "{title}",
     "on-click-middle": "hyprctl dispatch killactive"
   },
@@ -74,22 +91,28 @@
     "justify": "center"
   },
   "pulseaudio": {
-    "format": " {icon}\n{volume}%",
+    "format": " {icon} {volume}%",
     "on-click": "pavucontrol",
     "format-icons": {
       "headphone": "",
       "default": [
         "",
         "",
-        "󰕾",
-        "󰕾",
-        "󰕾",
-        "",
-        "",
         ""
       ]
     },
     "scroll-step": 1
+  },
+  "cpu": {
+    "format": "󰻠 {usage}%",
+    "on-click":"kitty btop"
+  },
+  "memory": {
+    "format": " {percentage}%"
+  },
+  "disk": {
+    "format":"󰋊 {percentage_used}%",
+    "on-click":"thunar"
   },
   "bluetooth": {
     "on-click": "blueman-manager",
@@ -137,34 +160,24 @@
       "on-click-right": "mode"
     }
   },
-  "custom/cpu": {
-    "exec": "python .config/waybar/bar.py 50 cpu no yes #1a1b26 #292e42 c0caf5",
-    "tooltip": true,
-    "format": "󰻠 {}",
-    "interval": 1,
-    "on-click": "kitty btop"
+  "group/group-info": {
+    "orientation":"inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-info",
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "custom/infolabel",
+      "pulseaudio",
+      "cpu",
+      "battery",
+      "memory",
+      "disk"
+    ]
   },
-  "custom/memory": {
-    "exec": "python .config/waybar/bar.py 50 mem no yes",
-    "tooltip": true,
-    "format": "󰍛 {}",
-    "interval": 1
-  },
-  "custom/disk": {
-    "exec": "python .config/waybar/bar.py 50 drive no yes",
-    "tooltip": true,
-    "format": "󰋊 {}",
-    "interval": 1,
-    "on-click": "thunar"
-  },
-  "custom/volume": {
-    "exec": "python .config/waybar/bar.py 50 volume yes yes",
-    "format": "󰕾 {}",
-    "tooltip": true,
-    "interval": 1,
-    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
-    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
-    "on-click": "pavucontrol"
+  "custom/infolabel": {
+    "format":"󰋼"
   },
   "group/group-power": {
     "orientation": "inherit",
@@ -194,6 +207,21 @@
     "tooltip": false,
     "on-click": "systemctl poweroff"
   },
+  "group/group-player": {
+    "orientation":"inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-player",
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "image",
+      "custom/player",
+      "custom/sback",
+      "custom/playpause",
+      "custom/sfw"
+    ]
+  },
   "image": {
     "exec": "python ~/Documents/Python/swb.py/wbImage.py",
     "size": 16,
@@ -204,6 +232,23 @@
     "interval": 10,
     "on-scroll-up": "playerctl -p spotify volume 0.05+",
     "on-scroll-down": "playerctl -p spotify volume 0.05-",
-    "on-click": "playerctl -p spotify play-pause"
+  },
+  "custom/playpause":{
+    "format":"{}",
+    "interval":1,
+    "exec":"python ~/Documents/Python/swb.py/getinfo.py playback",
+    "on-click": "playerctl play-pause"
+  },
+  "custom/sback":{
+    "format":"󰒮",
+    "on-click": "playerctl previous"
+  },
+  "custom/sfw":{
+    "format":"󰒭",
+    "on-click": "playerctl next"
+  },
+  "custom/wal": {
+    "format":"",
+    "on-click":"bash $HOME/.config/hypr/pywal.sh"
   }
 }

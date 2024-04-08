@@ -31,7 +31,7 @@ mainbox {
 
 inputbar {
   background-color: #16161e;
-  margin:0 10%;
+  margin:0 1%;
   padding:8px;
   border-radius:16px;
   border: 2px;
@@ -41,12 +41,13 @@ inputbar {
 }
 
 prompt {
-  enabled:  true;
+  enabled:  false;
 }
 
 entry {
   placeholder:        "search";
-  placeholder-color:  #aaa;
+  placeholder-color:  #ddd;
+  color:#fff;
 }
 
 listview {
