@@ -23,7 +23,7 @@
     "group/win"
   ],
   "battery": {
-    "format": "{icon}\n{capacity}%",
+    "format": "{icon} {capacity}%",
     "format-icons": [
     	"",
       "",
