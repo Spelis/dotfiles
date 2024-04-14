@@ -41,6 +41,8 @@ touch "$waybarpath" -m
 echo "Changing BetterDiscord theme."
 pywal-discord
 
+pywalfox update
+
 # literally had to generate the file myself because pywal wont :\
 
 colors=$(cat $HOME/.cache/wal/colors)
@@ -68,3 +70,8 @@ echo \$color12 = rgb\(${color[12]}\) >> $hyprTheme
 echo \$color13 = rgb\(${color[13]}\) >> $hyprTheme
 echo \$color14 = rgb\(${color[14]}\) >> $hyprTheme
 echo \$color15 = rgb\(${color[15]}\) >> $hyprTheme
+
+oomox-cli -o oomox ~/.cache/wal/colors-oomox
+gsettings set org.gnome.desktop.interface gtk-theme 'oomox'
+
+
