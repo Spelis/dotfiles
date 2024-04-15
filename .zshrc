@@ -34,6 +34,7 @@ alias x='exit'
 alias kys='exit' #hey, i mean it literally kills itself
 alias code='openclose code' # visual studio code
 alias chrome='openclose google-chrome-stable' # google chrome
+alias ls='eza --icons=always --no-quotes --group-directories-first --hyperlink'
 
 zstyle ':znap:*' repos-dir ~/Documents/Zsh/
 znap source marlonrichert/zsh-autocomplete
@@ -47,3 +48,4 @@ setopt correct
 export DRI_PRIME=1
 export PATH=$PATH:./node_modules/.bin
 
+clear

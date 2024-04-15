@@ -31,7 +31,7 @@ echo "switch background"
 swww img --transition-type grow --transition-pos 0.8,0.9 --transition-step 90 "${files[$index]}"
 
 echo "Setting Color Scheme"
-wal -i "${files[$index]}" -q
+wal -i "${files[$index]}" -q -a 0
 
 waybarpath="$HOME/.config/waybar/style.css"
 echo "Reloading waybar: $waybarpath"
