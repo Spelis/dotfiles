@@ -82,7 +82,8 @@ window {
 
 #custom-power,
 #custom-quit,
-#custom-reboot {
+#custom-reboot,
+#custom-notif {
 	padding: 2.5px 15px;
 	border-radius: 100px;
 	margin: 2.5px;
@@ -108,12 +109,12 @@ window {
 }
 
 #window {
-	color:@foreground;
+	color: @foreground;
 }
 
 #window.win2 {
 	color: @foreground;
-	opacity:0.7;
+	opacity: 0.7;
 }
 
 #group-info {
@@ -125,62 +126,68 @@ window {
 }
 
 #custom-infolabel {
-	padding-right:5px;
+	padding-right: 5px;
 }
 
 #pulseaudio {
-	background-color:@color2;
-	padding:0 10px;
-	margin:1px;
-	border-radius:100px 16px 16px 100px;
+	background-color: @color2;
+	padding: 0 10px;
+	margin: 1px;
+	border-radius: 100px 16px 16px 100px;
 }
+
 #cpu {
-	background-color:@color3;
-	padding:0 10px;
-	margin:1px;
-	border-radius:3.5px;
+	background-color: @color3;
+	padding: 0 10px;
+	margin: 1px;
+	border-radius: 3.5px;
 }
+
 #memory {
-	background-color:@color4;
-	padding:0 10px;
-	margin:1px;
-	border-radius:3.5px;
+	background-color: @color4;
+	padding: 0 10px;
+	margin: 1px;
+	border-radius: 3.5px;
 }
+
 #battery {
-	background-color:@color7;
-	padding:0 10px;
-	margin:1px;
-	border-radius:3.5px;
+	background-color: @color7;
+	padding: 0 10px;
+	margin: 1px;
+	border-radius: 3.5px;
 }
 
 #disk {
-	background-color:@color5;
-	padding:0 10px;
-	margin:1px;
-	border-radius:16px 100px 100px 16px;
+	background-color: @color5;
+	padding: 0 10px;
+	margin: 1px;
+	border-radius: 16px 100px 100px 16px;
 }
 
 #custom-wal {
-	background-color:@color6;
-	padding:0 10px;
-	margin:2px 1px 2px 2px;
-	border-radius:100px 16px 16px 100px;
-	font-size:20px;
+	background-color: @color6;
+	padding: 0 10px;
+	margin: 2px 1px 2px 2px;
+	border-radius: 100px 16px 16px 100px;
+	font-size: 20px;
 }
 
 #custom-sback,
 #custom-playpause,
 #custom-sfw {
-	margin:8px 2px;
-	border-radius:3.5px;
-	padding:2px 8px;
+	margin: 8px 2px;
+	border-radius: 3.5px;
+	padding: 2px 8px;
 }
+
 #custom-sback {
-	background:@color3;
+	background: @color3;
 }
+
 #custom-playpause {
-	background:@color4;
+	background: @color4;
 }
+
 #custom-sfw {
-	background:@color5;
+	background: @color5;
 }

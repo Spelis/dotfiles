@@ -1,4 +1,7 @@
 #!/bin/bash
+
+notify-send "Pywal" "Switched theme :3"
+
 # Generate a random index
 INDEX=$RANDOM
 
@@ -41,10 +44,12 @@ touch "$waybarpath" -m
 echo "Changing BetterDiscord theme."
 pywal-discord
 
+echo "Changing Firefox theme."
 pywalfox update
 
 # literally had to generate the file myself because pywal wont :\
 
+echo "Changing Hyprland Colors."
 colors=$(cat $HOME/.cache/wal/colors)
 colors=${colors//#/}
 readarray -t color <<<"$colors"
@@ -71,7 +76,8 @@ echo \$color13 = rgb\(${color[13]}\) >> $hyprTheme
 echo \$color14 = rgb\(${color[14]}\) >> $hyprTheme
 echo \$color15 = rgb\(${color[15]}\) >> $hyprTheme
 
+echo "changing oomox theme (GTK + QT)"
+
 oomox-cli -o oomox ~/.cache/wal/colors-oomox
 gsettings set org.gnome.desktop.interface gtk-theme 'oomox'
-
 

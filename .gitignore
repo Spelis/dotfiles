@@ -4,6 +4,9 @@
 !.config/*/
 !.config/hypr/*
 !.config/kitty/*
+.wallpaper/*
+!.wallpaper/
+!.wallpaper/*.*
 #!.config/qutebrowser/themes/*
 #!.config/qutebrowser/config.py
 #!.config/qutebrowser/autoconfig.yml
@@ -23,3 +26,6 @@ Documents
 .tmux/
 .cargo/
 .cache/
+.config/spicetify/
+.config/spicetify/*
+.config/spicetify/Themes/spicewal
