@@ -1,6 +1,12 @@
 #!/bin/bash
 
-notify-send "Pywal" "Switched theme :3"
+if [ -z "walcol" ]; then
+    LIGHT=''
+else
+    LIGHT=$walcol
+fi
+
+echo $LIGHT
 
 # Generate a random index
 INDEX=$RANDOM
@@ -31,10 +37,11 @@ index=$((INDEX % ${#files[@]}))
 
 # Access and print the file at the calculated index
 echo "switch background"
+notify-send "Pywal" "Switched theme:\n${files[$index]}" -i "${files[$index]}" -a 'Pywal Themes'
 swww img --transition-type grow --transition-pos 0.8,0.9 --transition-step 90 "${files[$index]}"
 
 echo "Setting Color Scheme"
-wal -i "${files[$index]}" -q -a 0
+wal -i "${files[$index]}" -n $LIGHT -a 0
 
 waybarpath="$HOME/.config/waybar/style.css"
 echo "Reloading waybar: $waybarpath"
