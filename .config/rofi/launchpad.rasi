@@ -19,11 +19,13 @@
 
 window {
   fullscreen: false;
-  padding: 0;
-  background-color:#16161e;
-  height:580px;
+  background-color:#00000001;
+  width: 450px;
   border-radius:16px;
-}
+  border: 2px;
+  border-color: #7dcfffff;
+  margin:20px;
+
 
 mainbox {
   padding:  0;
@@ -33,7 +35,6 @@ inputbar {
   background-color: #16161e;
   margin:0 1%;
   padding:8px;
-  border-radius:16px;
   border: 2px;
   border-color:#7dcfffff;
 
@@ -55,9 +56,10 @@ listview {
   margin:  0;
   padding: 10px;
   spacing:  4px;
-  columns:  2;
+  columns:  1;
   fixed-columns: true;
-  background-color:#1a1b26ff;
+  background-color:#00000000;
+  scrollbar:true;
 }
 
 element, element-text, element-icon {
@@ -70,7 +72,7 @@ element {
 
   orientation:    horizontal;
   border-radius:  16px;
-  background-color:#00000010;
+  background-color:#00000000;
 }
 
 element selected {
@@ -81,9 +83,18 @@ element selected {
 element-icon {
   size: 2em;
   horizontal-align: 0.5;
+  background-color: #7dcfff;
+  border-radius: 10px;
 }
 
 element-text {
-  horizontal-align: 0.5;
-  color:inherit;
+  horizontal-align: 0;
+  vertical-align: 0.5;
+  color:#ffffff80;
+  padding:5px;
+}
+
+
+element-text selected {
+  color:white;
 }

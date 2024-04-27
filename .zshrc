@@ -48,6 +48,5 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 setopt correct
 export DRI_PRIME=1
 export PATH=$PATH:./node_modules/.bin
-export TERM=foot
 
 clear

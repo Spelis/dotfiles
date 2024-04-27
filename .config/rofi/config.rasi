@@ -1,2 +1,4 @@
 @theme "/home/elis/.config/rofi/launchpad.rasi"
 
+configuration {
+}
