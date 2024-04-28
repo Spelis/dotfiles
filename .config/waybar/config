@@ -16,7 +16,7 @@
 		"group/group-player",
 		"cava",
 		"clock",
-		"group/group-power"
+		"custom/notif"
 	],
 	"modules-left": [
 		"custom/wal",
@@ -178,39 +178,10 @@
 	"custom/infolabel": {
 		"format": "󰋼"
 	},
-	"group/group-power": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 500,
-			"children-class": "not-power",
-			"transition-left-to-right": false
-		},
-		"modules": [
-			"custom/notif",
-			"custom/power",
-			"custom/quit",
-			"custom/reboot"
-		]
-	},
 	"custom/notif": {
 		"format": "󰎟",
 		"tooltip": false,
 		"on-click": "swaync-client -t"
-	},
-	"custom/quit": {
-		"format": "󰗼",
-		"tooltip": false,
-		"on-click": "hyprctl dispatch exit"
-	},
-	"custom/reboot": {
-		"format": "󰜉",
-		"tooltip": false,
-		"on-click": "systemctl reboot"
-	},
-	"custom/power": {
-		"format": "",
-		"tooltip": false,
-		"on-click": "systemctl poweroff"
 	},
 	"group/group-player": {
 		"orientation": "inherit",
@@ -233,11 +204,23 @@
 		"interval": 10
 	},
 	"custom/player": {
-		"exec": "python ~/Documents/Python/swb.py/playback.py",
-		"interval": 10,
-		"on-scroll-up": "playerctl -p spotify volume 0.05+",
-		"on-scroll-down": "playerctl -p spotify volume 0.05-"
-	},
+	    "format": " {} ",
+	    "format-icons": {
+	        // "Playing": " ", // Uncomment if not using caway
+	        "Paused": " ",
+	        "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
+	    },
+	    "escape": true,
+	    "tooltip": true,
+	    "exec": "~/.scripts/caway",
+	    "return-type": "json",
+	    "on-click": "playerctl play-pause",
+	    "on-scroll-up": "playerctl previous",
+	    "on-scroll-down": "playerctl next",
+	    "on-click-right": "g4music",
+	    "max-length": 35
+},
+
 	"custom/playpause": {
 		"format": "{}",
 		"interval": 1,

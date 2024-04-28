@@ -88,3 +88,25 @@ echo "changing oomox theme (GTK + QT)"
 oomox-cli -o oomox ~/.cache/wal/colors-oomox
 gsettings set org.gnome.desktop.interface gtk-theme 'oomox'
 
+rofiTheme=$HOME/.config/rofi/colors/wal.rasi
+
+echo '* {' > $rofiTheme
+echo 'background: #'${color[0]}';' >> $rofiTheme
+echo 'background-alt: #'${color[1]}';' >> $rofiTheme
+echo 'foreground: #'${color[15]}';' >> $rofiTheme
+echo 'selected: #'${color[3]}';' >> $rofiTheme
+echo 'active: #'${color[4]}';' >> $rofiTheme
+echo 'urgent: #'${color[5]}';' >> $rofiTheme
+echo '}' >> $rofiTheme
+# echo \$color6 = rgb\(${color[6]}\) >> $hyprTheme
+# echo \$color7 = rgb\(${color[7]}\) >> $hyprTheme
+# echo \$color8 = rgb\(${color[8]}\) >> $hyprTheme
+# echo \$color9 = rgb\(${color[9]}\) >> $hyprTheme
+# echo \$color10 = rgb\(${color[10]}\) >> $hyprTheme
+# echo \$color11 = rgb\(${color[11]}\) >> $hyprTheme
+# echo \$color12 = rgb\(${color[12]}\) >> $hyprTheme
+# echo \$color13 = rgb\(${color[13]}\) >> $hyprTheme
+# echo \$color14 = rgb\(${color[14]}\) >> $hyprTheme
+# echo \$color15 = rgb\(${color[15]}\) >> $hyprTheme
+
+

@@ -42,7 +42,14 @@ require("lazy").setup({
 	"nvim-telescope/telescope.nvim",
 	"nvim-lua/plenary.nvim",
 	"mawkler/modicator.nvim",
-	'AlphaTechnolog/pywal.nvim',
+	{
+	"oncomouse/lushwal.nvim",
+	cmd = { "LushwalCompile" },
+	dependencies = {
+		{ "rktjmp/lush.nvim" },
+		{ "rktjmp/shipwright.nvim" },
+	},
+},
 	{
 		'aurum77/live-server.nvim',
 		cmd = { 'LiveServerStart', 'LiveServerStop' },
@@ -224,16 +231,7 @@ require('satellite').setup()
 require("which-key").setup()
 require "live_server.util".install()
 
-local pywal = require('pywal')
-
-pywal.setup()
-
-
-
-
-
-
-vim.cmd('colorscheme pywal')
+vim.cmd('colorscheme lushwal')
 vim.cmd('set cursorline')
 vim.cmd('set number')
 require("modicator").setup()

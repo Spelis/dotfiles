@@ -80,13 +80,10 @@ window {
 	padding: 7px;
 }
 
-#custom-power,
-#custom-quit,
-#custom-reboot,
 #custom-notif {
 	padding: 2.5px 15px;
 	border-radius: 100px;
-	margin: 2.5px;
+	margin: 9.5px;
 	background: @color1;
 }
 
