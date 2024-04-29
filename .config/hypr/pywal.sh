@@ -37,7 +37,7 @@ index=$((INDEX % ${#files[@]}))
 
 # Access and print the file at the calculated index
 echo "switch background"
-notify-send "Pywal" "Switched theme:\n${files[$index]}" -i "${files[$index]}" -a 'Pywal Themes'
+notify-send "Pywal" "Switched theme:\n${files[$index]}" -i "${files[$index]}" -a 'System'
 swww img --transition-type grow --transition-pos 0.8,0.9 --transition-step 90 "${files[$index]}"
 
 echo "Setting Color Scheme"

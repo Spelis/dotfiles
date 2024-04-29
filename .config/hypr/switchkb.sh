@@ -10,3 +10,8 @@ keyboards=$(echo "$text" | awk '/Keyboard at/ {getline; print}')
 for keyboard in $keyboards; do
 	hyprctl switchxkblayout $keyboard next
 done
+
+
+kb=$(sh /home/elis/.config/waybar/getkb.sh)
+echo $kb
+notify-send "Keyboard Layout" "Switched Keyboard Layout to "$kb -a "System"
