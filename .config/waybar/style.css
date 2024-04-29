@@ -154,6 +154,13 @@ window {
 	border-radius: 3.5px;
 }
 
+#custom-kb {
+	background-color: @color8;
+	padding: 0 10px;
+	margin: 1px;
+	border-radius: 3.5px;
+}
+
 #disk {
 	background-color: @color5;
 	padding: 0 10px;

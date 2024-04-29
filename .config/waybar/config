@@ -172,6 +172,7 @@
 			"cpu",
 			"battery",
 			"memory",
+			"custom/kb",
 			"disk"
 		]
 	},
@@ -238,5 +239,10 @@
 	"custom/wal": {
 		"format": "",
 		"on-click": "bash $HOME/.config/hypr/pywal.sh"
+	},
+	"custom/kb": {
+		"format": "{}",
+		"exec": "bash ~/.config/waybar/getkb.sh",
+		"interval":1
 	}
 }
