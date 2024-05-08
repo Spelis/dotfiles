@@ -1,16 +1,5 @@
 #!/bin/bash
 
-if [ -z "walcol" ]; then
-    LIGHT=''
-else
-    LIGHT=$walcol
-fi
-
-echo $LIGHT
-
-# Generate a random index
-INDEX=$RANDOM
-
 # Specify the directory path
 DIR="$HOME/.wallpaper"
 
@@ -21,7 +10,9 @@ if [ ! -d "$DIR" ]; then
 fi
 
 # Initialize an empty array to store the file names
+
 files=()
+cmd=""
 
 # Iterate over all items in the directory
 for file in "$DIR"/*; do
@@ -29,19 +20,29 @@ for file in "$DIR"/*; do
     if [ -f "$file" ]; then
         # Add the file name to the array
         files+=("$file")
+	cmd=$cmd"$file\0icon\x1f$file\n"
     fi
 done
 
-# Calculate the modulo of the random index with the array length to ensure it's within bounds
-index=$((INDEX % ${#files[@]}))
 
+# Execute the Rofi command
+if [ "$1" = "" ]; then
+	file=$(echo -en "$cmd" | rofi -dmenu -config "$HOME/.config/rofi/theme.rasi")
+else
+	if [ $1 = "rand" ]; then
+		file=$(find "${DIR}" -type f | shuf -n 1)
+	else
+		file="$DIR/$1";
+	fi
+fi
+if [[ -n $file ]]; then
 # Access and print the file at the calculated index
 echo "switch background"
-notify-send "Pywal" "Switched theme:\n${files[$index]}" -i "${files[$index]}" -a 'System'
-swww img --transition-type grow --transition-pos 0.8,0.9 --transition-step 90 "${files[$index]}"
+notify-send "Pywal" "Switched theme:\n$file" -i "$file" -a 'System'
+swww img --transition-type grow --transition-pos 0.8,0.9 --transition-step 90 "$file"
 
 echo "Setting Color Scheme"
-wal -i "${files[$index]}" -n $LIGHT -a 0
+wal -i "$file" -n -a 0
 
 waybarpath="$HOME/.config/waybar/style.css"
 echo "Reloading waybar: $waybarpath"
@@ -109,4 +110,7 @@ echo '}' >> $rofiTheme
 # echo \$color14 = rgb\(${color[14]}\) >> $hyprTheme
 # echo \$color15 = rgb\(${color[15]}\) >> $hyprTheme
 
+else
+	notify-send "Pywal" "Cancelled" -a 'System'
 
+fi

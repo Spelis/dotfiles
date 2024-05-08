@@ -1,5 +1,5 @@
 cat ~/.cache/wal/sequences
-
+pokemon-colorscripts -r
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -22,7 +22,7 @@ openclose() {
     exit
 }
 
-alias nf='neofetch'
+alias nf='nerdfetch'
 alias cls='clear'
 alias pacman='sudo pacman'
 alias yoink='paru -S'      # install package
@@ -49,4 +49,3 @@ setopt correct
 export DRI_PRIME=1
 export PATH=$PATH:./node_modules/.bin
 
-clear
