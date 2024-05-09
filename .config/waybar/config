@@ -79,7 +79,7 @@
 		"on-click-middle": "hyprctl dispatch killactive"
 	},
 	"hyprland/workspaces": {
-		"format": "{name}{windows}",
+		"format": "{windows}",
 		"format-window-separator": "",
 		"tooltip": true,
 		"all-outputs": true,
