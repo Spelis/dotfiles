@@ -12,7 +12,10 @@
 		"group/win"
 	],
 	"modules-center": [
-		"hyprland/workspaces",
+		"image#ws1",
+		"image#ws2",
+		"image#ws3",
+		"image#ws4",
 		"custom/sep",
 		"wlr/taskbar",
 		"group/group-info"
@@ -42,7 +45,7 @@
 		"format": "|"
 	},
     "custom/sep2": {
-		"format": "|" // this basically fixes some issues with group drawers not opening correctly.
+		"format": "|"
 	},
 	"wlr/taskbar": {
 		"on-click": "activate",
@@ -50,7 +53,7 @@
 		"format": "{icon}",
 		"icon-size": 32,
 		"tooltip-format": "{name}\n{title}\n{state}",
-		"rewrite": { // doesnt work?
+		"rewrite": {
 			"Firefox Web Browser": "󰈹 Firefox",
 			"kitty": "󰄛 Terminal", 
 			"code": "󰨞 VSCode",
@@ -102,11 +105,39 @@
             "obs": " "
 			}
 	},
+	"image#ws1": {
+		"exec": "python .config/waybar/workspace.py 1",
+		"interval": 1,
+		"size":32,
+		"tooltip":true,
+		"tooltip-format": "Switch To Workspace 1 (󰘳 + 1)"
+	},	
+	"image#ws2": {
+		"exec": "python .config/waybar/workspace.py 2",
+		"interval": 1,
+		"size":32,
+		"tooltip":true,
+		"tooltip-format": "Switch To Workspace 2 (󰘳 + 2)"
+	},
+	"image#ws3": {
+		"exec": "python .config/waybar/workspace.py 3",
+		"interval": 1,
+		"size":32,
+		"tooltip":true,
+		"tooltip-format": "Switch To Workspace 3 (󰘳 + 3)"
+	},
+	"image#ws4": {
+		"exec": "python .config/waybar/workspace.py 4",
+		"interval": 1,
+		"size":32,
+		"tooltip":true,
+		"tooltip-format": "Switch To Workspace 4 (󰘳 + 4)"
+	},
 	"clock": {
         "tooltip-format": "{:%Y-%m-%d\n%H:%M:%S}",
 		"format": "{:%H\n%M}",
 		"interval": 1,
-		"justify": "center",
+		"justify": "center"
 	},
 	"pulseaudio": {
 		"format": " {icon} {volume}%",
@@ -148,7 +179,7 @@
 		"format": "󰻠 {usage}%",
 		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
 		"on-click-right": "kitty btop",
-        "tooltip-format": "open btop (^ + 󰘶 + 󱊷 )",
+        "tooltip-format": "Open btop (^ + 󰘶 + 󱊷 )",
         "tooltip": true,
         "interval":1
 	},
@@ -159,7 +190,8 @@
 	},
 	"disk": {
 		"format": "󰋊 {percentage_used}%",
-		"on-click": "thunar"
+		"on-click": "thunar",
+		"tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)\nOpen Thunar (󰘳 + 󰘶 + 󰌑)"
 	},
 	"bluetooth": {
 		"on-click": "blueman-manager",
