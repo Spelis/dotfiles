@@ -9,6 +9,10 @@ if [ ! -d "$DIR" ]; then
     exit 1
 fi
 
+if [[ $(cat $HOME/.config/theme/cur) == "light" ]]; then
+    light=-l
+fi
+
 # Initialize an empty array to store the file names
 
 files=()
@@ -35,14 +39,18 @@ else
 		file="$DIR/$1";
 	fi
 fi
+
+echo "${file#$DIR/}" > "$HOME/.config/theme/bg"
+
 if [[ -n $file ]]; then
 # Access and print the file at the calculated index
 echo "switch background"
 notify-send "Pywal" "Switched theme:\n$file" -i "$file" -a 'System'
 swww img --transition-type grow --transition-pos 0.8,0.9 --transition-step 90 "$file"
 
+
 echo "Setting Color Scheme"
-wal -i "$file" -n -a 0
+wal -i "$file" -n -a 0 $light
 
 waybarpath="$HOME/.config/waybar/style.css"
 echo "Reloading waybar: $waybarpath"

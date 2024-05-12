@@ -107,6 +107,7 @@
 	},
 	"image#ws1": {
 		"exec": "python .config/waybar/workspace.py 1",
+		"on-click": "hyprctl dispatch workspace 1",
 		"interval": 1,
 		"size":32,
 		"tooltip":true,
@@ -114,6 +115,7 @@
 	},	
 	"image#ws2": {
 		"exec": "python .config/waybar/workspace.py 2",
+		"on-click": "hyprctl dispatch workspace 2",
 		"interval": 1,
 		"size":32,
 		"tooltip":true,
@@ -121,6 +123,7 @@
 	},
 	"image#ws3": {
 		"exec": "python .config/waybar/workspace.py 3",
+		"on-click": "hyprctl dispatch workspace 3",
 		"interval": 1,
 		"size":32,
 		"tooltip":true,
@@ -128,6 +131,7 @@
 	},
 	"image#ws4": {
 		"exec": "python .config/waybar/workspace.py 4",
+		"on-click": "hyprctl dispatch workspace 4",
 		"interval": 1,
 		"size":32,
 		"tooltip":true,
@@ -300,9 +304,12 @@
 	},
 	"custom/wal": {
 		"tooltip-format": "Switch Theme (󰘳 + W)",
-		"format": "",
+		"format": "{}",
+		"exec":"cat $HOME/.config/theme/icon",
+		"interval": 1,
 		"tooltip":true,
-		"on-click": "bash $HOME/.config/hypr/pywal.sh rand"
+		"on-click": "bash $HOME/.config/hypr/pywal.sh rand",
+		"on-click-right": "bash $HOME/.config/theme/switch.sh"
 	},
 	"custom/kb": {
 		"tooltip-format": "Switch Keyboard Layout (󰘳 + X)",

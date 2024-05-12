@@ -2,6 +2,7 @@
 !*/
 .config/*
 !.config/*/
+!.config/theme/*
 !.config/hypr/*
 !.config/kitty/*
 .wallpaper/*

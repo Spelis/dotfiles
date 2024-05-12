@@ -4,6 +4,7 @@
     all: unset;
 	font-family: 'JetBrainsMono Nerd Font';
     transition: background-color .3s ease;
+    color: @foreground
 }
 
 tooltip,

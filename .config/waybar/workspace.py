@@ -1,5 +1,5 @@
 import argparse
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 from os import popen, environ
 from json import loads
 
@@ -12,7 +12,11 @@ def hex_to_rgb(value):
 
 parser = argparse.ArgumentParser("custom workspace for waybar")
 parser.add_argument("workspace")
-parser.add_argument("-c", help="Set the file with the colors. (.json file)", default=f"{environ["HOME"]}/.cache/wal/colors.json")
+parser.add_argument(
+    "-c",
+    help="Set the file with the colors. (.json file)",
+    default=f"{environ["HOME"]}/.cache/wal/colors.json",
+)
 args = parser.parse_args()
 
 with open(args.c, "r") as f:
@@ -72,8 +76,9 @@ for win in f:
         size[0], size[1] = at[0] + (int(size[0]) // 10), at[1] + (int(size[1]) // 10)
 
         color = tuple(fg) if not "selected" in win.keys() else tuple(cl1)
-        draw.rectangle([*at, *size], fill=color, outline=(0, 0, 0), width=3)
-
+        draw.rounded_rectangle([*at, *size], fill=color, outline=(0, 0, 0), width=3)
 
 im.save(f'{environ["HOME"]}/.config/waybar/ws{args.workspace}.png')
-print(f'{environ["HOME"]}/.config/waybar/ws{args.workspace}.png')
+print(
+    f'{environ["HOME"]}/.config/waybar/ws{args.workspace}.png'
+)  # waybar gets the path to the image :)
