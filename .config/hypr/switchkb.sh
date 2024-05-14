@@ -12,6 +12,6 @@ for keyboard in $keyboards; do
 done
 
 
-kb=$(sh /home/elis/.config/waybar/getkb.sh)
+kb="$(python /home/elis/.config/waybar/getkb.py)"
 echo $kb
-notify-send "Keyboard Layout" "Switched Keyboard Layout to "$kb -a "System"
+notify-send "Keyboard Layout" "Switched Keyboard Layout to $kb" -a "System"

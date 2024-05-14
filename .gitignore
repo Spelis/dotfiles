@@ -24,3 +24,4 @@ Documents
 .config/spicetify/
 .config/spicetify/*
 .config/spicetify/Themes/spicewal
+.config/waybar/ws*.png

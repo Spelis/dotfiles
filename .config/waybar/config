@@ -303,7 +303,7 @@
 		"tooltip":false
 	},
 	"custom/wal": {
-		"tooltip-format": "Switch Theme (󰘳 + W)",
+		"tooltip-format": "Switch Theme               (󰘳 + W)\nToggle Light/Dark Mode (󰘳 + 󰘶 + W)",
 		"format": "{}",
 		"exec":"cat $HOME/.config/theme/icon",
 		"interval": 1,
@@ -312,10 +312,10 @@
 		"on-click-right": "bash $HOME/.config/theme/switch.sh"
 	},
 	"custom/kb": {
-		"tooltip-format": "Switch Keyboard Layout (󰘳 + X)",
+		"tooltip-format": "Switch Keyboard Layout (󰘳 + X)\nLayout: {}",
 		"tooltip":true,
 		"format": "  {}",
-		"exec": "bash .config/waybar/getkb.sh",
+		"exec": "python .config/waybar/getkb.py",
 		"interval":1
 	}
 }
