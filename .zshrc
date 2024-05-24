@@ -1,6 +1,6 @@
 cat ~/.cache/wal/sequences
 pokemon-colorscripts -r
-
+setopt autocd
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -36,6 +36,7 @@ alias code='openclose code' # visual studio code
 alias chrome='openclose google-chrome-stable' # google chrome
 alias ls='eza --icons=always --no-quotes --group-directories-first --hyperlink'
 alias py='python'
+alias bind='python $HOME/.config/hypr/binds.py'
 
 zstyle ':znap:*' repos-dir ~/Documents/Zsh/
 znap source marlonrichert/zsh-autocomplete

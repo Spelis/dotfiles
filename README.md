@@ -1,5 +1,8 @@
 Config files :)
 
+# GOOD TO KNOW:
+if you want to know the default keybinds from my dotfiles, you can press Super+B or type in 'bind' in the terminal. or if you like doing things terminal based you can look through the messy hyprland config file in ~/.config/hypr/hyprland.conf
+
 # wallpapers:
 [Hollow Knight](https://github.com/SherLock707/hyprland_dots/tree/main/Pictures%2Fwallpapers)
 [MacOS](https://512pixels.net/projects/default-mac-wallpapers-in-5k/)
