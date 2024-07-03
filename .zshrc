@@ -22,7 +22,7 @@ openclose() {
     exit
 }
 
-alias nf='nerdfetch'
+alias nf='pokemon-colorscripts -r'
 alias cls='clear'
 alias pacman='sudo pacman'
 alias yoink='paru -S'      # install package
@@ -33,10 +33,11 @@ alias z='cd'
 alias x='exit'
 alias kys='exit' #hey, i mean it literally kills itself
 alias code='openclose code' # visual studio code
-alias chrome='openclose google-chrome-stable' # google chrome
+alias firefox='openclose firefox' # firefox
 alias ls='eza --icons=always --no-quotes --group-directories-first --hyperlink'
 alias py='python'
 alias bind='python $HOME/.config/hypr/binds.py'
+alias grassfetch="kitty +kitten icat 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2FNVtF-8Ckz68AAAAC%2Fgrass-touch.gif&f=1&nofb=1&ipt=03726cb8e9306190dfd975c80ca198eec810d790d0f2486db5bcff4c877a5ee9&ipo=images'"
 
 zstyle ':znap:*' repos-dir ~/Documents/Zsh/
 znap source marlonrichert/zsh-autocomplete

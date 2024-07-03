@@ -41,9 +41,12 @@ for i in range(lines):
     old = output[j + 1 : 21 + j]
     new = {}
     for ii in old:
-        ii = ii.replace("\t", "")
-        ii = ii.split(": ", 1)
-        new[ii[0]] = ii[1]
+        try: # fck it if we get error we continue
+            ii = ii.replace("\t", "")
+            ii = ii.split(": ", 1)
+            new[ii[0]] = ii[1]
+        except Exception:
+            pass
     if new["floating"] == "0":
         t.append(new)
     else:

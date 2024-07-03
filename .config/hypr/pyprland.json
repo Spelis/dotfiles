@@ -1,0 +1,27 @@
+{
+    "pyprland": {
+        "plugins": [
+            "scratchpads"
+        ]
+    },
+    "scratchpads": {
+        "term": {
+            "command": "kitty --class scratchpad tmux",
+            "margin": 70,
+            "animation": "fromTop",
+            "unfocus": "hide"
+        },
+        "pavu": {
+            "command": "pavucontrol",
+            "margin": 70,
+            "unfocus": "hide",
+            "animation": "fromTop"
+        },
+        "spot": {
+            "command": "spotify",
+            "margin": 70,
+            "unfocus": "hide",
+            "animation": "fromTop"
+        }
+    }
+}

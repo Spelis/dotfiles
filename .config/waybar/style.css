@@ -1,4 +1,4 @@
-@import url('/home/elis/.cache/wal/colors-waybar.css');
+@import url('../../.cache/wal/colors-waybar.css');
 
 * {
     all: unset;
@@ -167,7 +167,7 @@ window {
 }
 
 #battery {
-	background-color: @color7;
+	background-color: @color3;
 	padding: 0 10px;
 	margin: 1px;
 	border-radius: 3.5px;

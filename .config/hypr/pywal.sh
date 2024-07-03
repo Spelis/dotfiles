@@ -45,32 +45,30 @@ echo "${file#$DIR/}" > "$HOME/.config/theme/bg"
 if [[ -n $file ]]; then
 # Access and print the file at the calculated index
 echo "switch background"
-notify-send "Pywal" "Switched theme:\n$file" -i "$file" -a 'System'
-swww img --transition-type grow --transition-pos 0.8,0.9 --transition-step 90 "$file"
+notify-send "Pywal" "Switched theme:\n$file" -i "$file" -a 'System' > /dev/null
+swww img --transition-type any --transition-fps 165 --transition-pos top-right "$file" > /dev/null
 
 
 echo "Setting Color Scheme"
-wal -i "$file" -n -a 0 $light
+wal -i "$file" -n -a 0 $light > /dev/null
 
 waybarpath="$HOME/.config/waybar/style.css"
-echo "Reloading waybar: $waybarpath"
+echo "Reloading waybar: $waybarpath" > /dev/null
 
-touch "$waybarpath" -m
+touch "$waybarpath" -m > /dev/null
 
 echo "Changing BetterDiscord theme."
-pywal-discord
+pywal-discord > /dev/null
 
 echo "Changing Firefox theme."
-pywalfox update
+pywalfox update > /dev/null
 
 # literally had to generate the file myself because pywal wont :\
 
 echo "Changing Hyprland Colors."
 colors=$(cat $HOME/.cache/wal/colors)
 colors=${colors//#/}
-readarray -t color <<<"$colors"
-
-echo ${y[0]}
+readarray -t color <<<"$colors" > /dev/null
 
 hyprTheme=$HOME/.cache/wal/colors-hyprland.conf
 
@@ -92,10 +90,10 @@ echo \$color13 = rgb\(${color[13]}\) >> $hyprTheme
 echo \$color14 = rgb\(${color[14]}\) >> $hyprTheme
 echo \$color15 = rgb\(${color[15]}\) >> $hyprTheme
 
-echo "changing oomox theme (GTK + QT)"
+echo "Changing Oomox theme (GTK + QT)"
 
-oomox-cli -o oomox ~/.cache/wal/colors-oomox
-gsettings set org.gnome.desktop.interface gtk-theme 'oomox'
+oomox-cli -o oomox ~/.cache/wal/colors-oomox > /dev/null
+gsettings set org.gnome.desktop.interface gtk-theme 'oomox' > /dev/null
 
 rofiTheme=$HOME/.config/rofi/colors/wal.rasi
 
