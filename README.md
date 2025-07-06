@@ -1,2 +1,2 @@
-# Dotfiles
-these are my dotfiles. i have everything organized in different branches so check those out.
+# Hyprland Dots
+These are my hyprland dotfiles, feel free to use however you'd like
