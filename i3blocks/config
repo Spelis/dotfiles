@@ -1,0 +1,16 @@
+[WIRELESS]
+command=~/.config/i3blocks/ip/ipinfo.sh
+interval=300
+markup=pango
+
+[CPU]
+command=~/.config/i3blocks/cpu/cpu_info.sh
+interval=5
+
+[MEM]
+command=~/.config/i3blocks/mem/mem_info.sh
+interval=5
+
+[TIME]
+command=date +"%A, %B %d, %Y %I:%M:%S %p"
+interval=1
